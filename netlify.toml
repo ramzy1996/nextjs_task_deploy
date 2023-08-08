@@ -1,15 +1,18 @@
 # example netlify.toml
 [build]
-  command = "npm run buid"
+  command = "next build"
   functions = "netlify/functions"
   publish = ".next"
+  NEXT_PRIVATE_TARGET = true
+  DATABASE_URL = "mongodb+srv://admin:1234@cluster0.cyc7gd8.mongodb.net/nextjs_task"
+  NETLIFY_AUTH_TOKEN = "ABsXB01ouc2A1neBdZyqEcTbj3uw06wIoo15xZH0o6k"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
-  #[[redirects]]
-  #  from = "/*"
-  #  to = "/index.html"
-  #  status = 200
+  [[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
 
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/cli/blob/main/docs/netlify-dev.md#project-detection
