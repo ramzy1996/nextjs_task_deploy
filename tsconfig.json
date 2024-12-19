@@ -38,8 +38,8 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         "app/not-found.tsx",
-        "app/api/notes/[id]/route.js"
-    ],
+        "app/api/notes/[id]/route.js",
+         "server.js"    ],
     "exclude": [
         "node_modules"
     ]
